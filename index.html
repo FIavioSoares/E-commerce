@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body class="bg-stone-200 flex flex-col">
+  <section id="cart" class="fixed top-0 right-[-22.5rem] bg-slate-950 text-slate-200 h-screen w-[22.5rem] z-50 duration-200 border-l border-slate-200 p-5 flex flex-col justify-between">
+    <div id="cart-header" class="flex justify-between m-1">
+      <p>Meu Carrinho</p>
+      <button id="cart-close"><i class="fa-solid fa-circle-xmark"></i></button>
+    </div>
+    <section id="cart-products" class="h-3/5 overflow-y-auto flex flex-col gap-2"></section>
+    <p id="total-price" class="bg-slate-200 text-green-800 rounded-sm pl-5">Total: $0</p>
+    <button id="checkout" class="bg-slate-200 text-slate-900 hover:bg-slate-900 hover:text-slate-200">Finalizar Compra</button>
+  </section>
+  <header class="flex text-xl justify-between sticky top-0 bg-slate-950 shadow-xl shadow-slate-400 px-2 py-1 z-10">
+    <a href="./"><img src="assets/logo/logo.svg" class="h-16" alt="logo"></a>
+    <div class="text-slate-200 flex items-end gap-1 mx-1" >
+      <button id="cart-open" class="mx-2"><i class="fa-solid fa-cart-shopping"></i></button>
+      <a href="orders.html"><button class="mr-2"><i class="fa-solid fa-user"></i></button></a>
+    </div>
+  </header>
+  <main class="flex flex-col items-center">
+    <section id="filters" class="p-10 flex">
+      <div class="px-2">
+        <input id ="show-all" type="radio" name="filter" class="peer hidden" checked>
+        <labeL for="show-all" class="peer-checked:bg-slate-950 peer-checked:text-slate-200 peer-checked:font-bold p-2 rounded-xl select-none cursor-pointer">Todos</labeL>
+      </div>
+      <div class="px-2">
+        <input id ="show-male" type="radio" name="filter" class="peer hidden">
+        <labeL for="show-male" class="peer-checked:bg-slate-950 peer-checked:text-slate-200 peer-checked:font-bold p-2 rounded-xl select-none cursor-pointer">Masculinos</labeL>
+      </div>
+      <div class="px-2">
+        <input id ="show-female" type="radio" name="filter" class="peer hidden">
+        <labeL for="show-female" class="peer-checked:bg-slate-950 peer-checked:text-slate-200 peer-checked:font-bold p-2 rounded-xl select-none cursor-pointer">Femininos</labeL>
+      </div>
+    </section>
+    <section id="product-container" class="flex flex-wrap p-10 justify-center gap-10"></section>
+  </main>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
