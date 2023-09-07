@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css">
-  <title>Document</title>
+  <title>Finalizar pedido</title>
 </head>
 <body class="bg-stone-200 flex flex-col h-screen">
   <header class="flex text-xl justify-between sticky top-0 bg-slate-950 shadow-xl shadow-slate-400 px-2 py-1 z-10">
     <a href="./"><img src="assets/logo/logo.svg" class="h-12" alt="logo"></a>
   </header>
-  <form class="flex w-100 px-5 gap-4 py-10 grow">
-    <section id="user-data" class="w-1/3 bg-white rounded-lg py-5">
+  <form class="flex flex-col md:flex-row md:justify-between w-full px-5 gap-4 py-10 grow">
+    <section id="user-data" class="w-full md:w-1/3 bg-white rounded-lg py-5">
       <p class="mb-5 text-center font-bold">Seus Dados</p>
       <div class="flex flex-col px-10 py-3">
         <label for="name" class="font-bold text-sm mb-2">Nome</label>
@@ -27,8 +27,8 @@
         <input type="tel" id="number" class="rounded-sm px-2 border-2 border-slate-200 py-1" placeholder="Numero" required>
       </div>
     </section>
-    <section id="payment-data" class="w-1/3 bg-white rounded-lg py-5">
-        <p class="mb-5 text-center font-bold">Pagamento e entrega</p>
+    <section id="payment-data" class="w-full md:w-1/3 bg-white rounded-lg py-5">
+      <p class="mb-5 text-center font-bold">Pagamento e entrega</p>
         <div class="flex flex-col px-10 py-3">
           <label for="card-number" class="font-bold text-sm mb-2">Numero do Cartão</label>
           <input type="text" id="card-number" class="rounded-sm px-2 border-2 border-slate-200 py-1" placeholder="Numero do Cartão" required>
@@ -62,7 +62,7 @@
           </div>
         </div>
     </section>
-    <section id="products-checkout" class="w-1/3 bg-white rounded-lg py-5">
+    <section id="products-checkout" class="w-full md:w-1/3 bg-white rounded-lg py-5">
       <section id="checkout-products-container" class="h-4/5 overflow-y-auto px-2 flex flex-col items-center"></section>
       <section id="checkout-part" class="flex flex-col px-2 h-1/5 justify-around">
         <p id="total-price" class="bg-slate-200 text-green-800 rounded-lg pl-5"></p>
